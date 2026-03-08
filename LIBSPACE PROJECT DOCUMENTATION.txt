@@ -1,0 +1,170 @@
+               LIBSPACE PROJECT DOCUMENTATION 
+
+         LIBSPACE API-A ROBUST BACKEND FOR LIBRARY OPERATIONS
+
+
+Team ID:SWTID-2026-5224
+
+Team Leader: Monisha D
+Team Members:
+      1.Semira Serin S
+      2.Abirami S
+      3.Aswini S
+      4.Janani S
+
+
+1. INTRODUCTION
+In modern digital systems, managing information efficiently is very important. Libraries require a
+system that can store, update, and manage book records easily. Manual record keeping is difficult
+and time-consuming. To solve this problem, a web-based library management backend system
+named LibSpace is developed.
+
+LibSpace is a backend application that manages users and books through RESTful APIs. It allows
+users to register, log in, and perform book management operations such as adding, updating,
+viewing, and deleting books. Each book is associated with a specific user to ensure secure access.
+The project mainly demonstrates how authentication and CRUD operations can be implemented
+using modern backend technologies like Node.js, Express.js, and MongoDB.
+The goal of this project is to build a secure backend system that handles user authentication,
+protects data, and manages books effectively.
+
+
+2. OBJECTIVES OF THE PROJECT
+
+• To develop a backend system for managing library books.
+• To implement secure user authentication using JWT tokens.
+• To allow users to perform CRUD operations on books.
+• To design a scalable backend architecture.
+• To demonstrate RESTful API development using Node.js and Express.js.
+• To integrate MongoDB database for storing user and book data.
+• To maintain a relationship between users and books.
+
+3. PROJECT OVERVIEW
+
+LibSpace is a web-based backend API system designed to manage library operations. The system
+provides user authentication and book management functionalities.
+Users can create accounts, log in, and manage books associated with their accounts. All operations
+are secured using token-based authentication.
+
+Main features include:
+
+User Registration
+User Login
+Secure Authentication
+Add Books
+View Books
+Update Books
+Delete Books
+Delete User Account
+
+4. SYSTEM REQUIREMENTS
+
+Hardware Requirements
+Processor: Intel Core i3 or higher
+RAM: Minimum 4GB
+Storage: 20GB free space
+Software Requirements
+Operating System: Windows / Linux / Mac
+Node.js
+npm (Node Package Manager)
+MongoDB Database
+Visual Studio Code
+Web Browser (Chrome / Firefox)
+Postman API Testing Tool
+
+5. TECHNOLOGIES USED
+
+Node.js – JavaScript runtime environment
+Express.js – Web framework for API development
+MongoDB – NoSQL database
+Mongoose – ODM library for MongoDB
+JWT – JSON Web Token for authentication
+bcrypt – Password hashing for security
+
+6. SYSTEM ARCHITECTURE
+
+LibSpace follows a layered backend architecture with three layers:
+API Layer (Routes) – Handles HTTP requests and endpoints.
+Business Logic Layer (Controllers) – Contains authentication logic and CRUD operations.
+Data Access Layer (Models) – Handles database schema and data storage.
+
+7. DATABASE DESIGN
+
+Database used: MongoDB
+
+Users Collection:
+name
+email
+password
+createdAt
+updatedAt
+
+Books Collection:
+title
+author
+url
+user (reference id)
+Relationship:
+One User → Many Books
+Each Book → Belongs to one User
+
+8. FEATURES OF THE SYSTEM
+
+User Authentication:
+
+User Registration
+Login Authentication
+Password Hashing
+JWT Token Generation
+Logout
+Delete User Account
+
+Book Management:
+
+Add Book
+View Books
+Get Book by ID
+Update Book
+Delete Book
+
+Security:
+
+Password encryption
+JWT verification
+Input validation
+Protected routes
+
+9. PROJECT WORKFLOW
+
+Step 1: User Registration
+POST /api/auth/register
+
+Step 2: User Login
+POST /api/auth/login
+
+Step 3: Authentication
+Authorization: Bearer
+
+Step 4: Book Operations
+POST Add Book
+GET Get Books
+PUT Update Book
+DELETE Delete Book
+
+Step 5: Logout
+
+Step 6: Delete Account
+
+10. PROJECT IMPLEMENTATION
+
+The project is implemented using Node.js, Express.js and MongoDB.
+
+Folder Structure:
+
+MY-LIBSPACE-MAIN
+Config
+controller
+middlewares
+models
+routes
+index.js
+package.jso
